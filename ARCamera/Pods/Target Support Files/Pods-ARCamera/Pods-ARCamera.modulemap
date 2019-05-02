@@ -1,0 +1,6 @@
+framework module Pods_ARCamera {
+  umbrella header "Pods-ARCamera-umbrella.h"
+
+  export *
+  module * { export * }
+}

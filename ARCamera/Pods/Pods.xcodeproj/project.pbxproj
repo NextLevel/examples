@@ -1,0 +1,820 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27C774B409174F8C09C7D3FA4BBADB3F /* NextLevel+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7666E1F19D6A05EE0B73E7CC5DAF0283 /* NextLevel+Foundation.swift */; };
+		352DDD09FFACE19988DFC526AB8C3259 /* NextLevelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBD1A5DB59ABA6D7824DB7706ED7E9 /* NextLevelProtocols.swift */; };
+		4362DFF2C735ECD7BE86FC2F109628B5 /* NextLevel+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F1D0AC000A66294A8A589453F2C2E /* NextLevel+Metadata.swift */; };
+		49943137CC81B748B83261395A1626EC /* Pods-ARCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89435F6BD87AF87EF30AA0C2B808F63E /* Pods-ARCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F0426CB63A54156EE2DBE24124C5459 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		6D4386E2A08785C67DD9249DD81947FF /* NextLevel+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCA69279D034705F0A3F3B996ED6C7 /* NextLevel+UIImage.swift */; };
+		7ACF6F7D25B0C93BE0ED0230DA921DDB /* Pods-ARCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6D91B5D63AB4C8FB724803437D553 /* Pods-ARCamera-dummy.m */; };
+		7BDF16F05BB7889F7A1FE1B46092A493 /* NextLevel+AVFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787FB008846CAF66C6E2FE764BF4A8C /* NextLevel+AVFoundation.swift */; };
+		7D4058E5C55C8DBC10B2CAC1635B136E /* RPCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F376451EBEAF9324562FA9ED57AC32 /* RPCircularProgress.swift */; };
+		8AF58FDBFC6C759DA22148B1B330CF99 /* RPCircularProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E195C8A99091ABF0784A3C8086CDD657 /* RPCircularProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B8AAE6D14F7505208C727479C8EE247 /* NextLevelSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEA5563FE4CFEB588AFED8ECDA804F /* NextLevelSession.swift */; };
+		8F4C0F17ABFD483FC45378CA50E0D27E /* NextLevel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E3DADE50504DB1AB3B99742222980E /* NextLevel-dummy.m */; };
+		952E5FD8E7594F1D829021FF8944B9E2 /* NextLevel+CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F006C857EDCB668DFD12A6E4DD0FA /* NextLevel+CIContext.swift */; };
+		9DA507336B9F7F3435DC1C4B68E6331F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		A319AA8B17F5F56D4FBDDDEFF1851FD7 /* NextLevelGIFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920A280CFFF8E809AA96EB9CA538F72 /* NextLevelGIFCreator.swift */; };
+		B680A26FBEE48771C261ED6FC6614017 /* NextLevel+CMSampleBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF554A04D76B8356DEA46EA5337F5D /* NextLevel+CMSampleBuffer.swift */; };
+		C120BAB3A8D08FF34BD0904A2B47D110 /* NextLevelClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92783A74D474EC1F48E4C802DE85B33D /* NextLevelClip.swift */; };
+		C4ABE9A4953CF6CF32E2212B64112712 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		C84E858A19FEC831AFC07DC65B9D098E /* NextLevelBufferRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762DBEFA5A52F1BD3300CA5D1B123595 /* NextLevelBufferRenderer.swift */; };
+		CBA67702BCCB575555022F29906B4116 /* NextLevel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3302DD24A61CFB900DAC5AB23A5CB27A /* NextLevel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D130B35DAA38B43A388BCE45B9A8A525 /* NextLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC93363A523B2DFC21656F7F6472E07 /* NextLevel.swift */; };
+		EDBF2AEA6BB571F6582C985D969FBDB8 /* NextLevelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82541281510B52CB6771EFFA3653F49 /* NextLevelConfiguration.swift */; };
+		EDD7B907A851B68BEC9371B0026FA52F /* RPCircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 183EAD6DDC98D6D5EC4E82CACBE3AE13 /* RPCircularProgress-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73F0AC4C97A008DDA9167A9053764D40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF17A187251DCD6C551C8C2A33F3105C;
+			remoteInfo = RPCircularProgress;
+		};
+		A282ECAD3A1008A9988C2A7ED65BD331 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B36AEC81309F0FEDAE7D7985020CA31A;
+			remoteInfo = NextLevel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		063AF92F814AAF7EA80BFE52D1DACF55 /* Pods-ARCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARCamera.modulemap"; sourceTree = "<group>"; };
+		183EAD6DDC98D6D5EC4E82CACBE3AE13 /* RPCircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RPCircularProgress-dummy.m"; sourceTree = "<group>"; };
+		1F1467F49F2839DCAF98745F6306EB4E /* Pods-ARCamera-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ARCamera-frameworks.sh"; sourceTree = "<group>"; };
+		1FDCEBC957BB8222C1C7156561A0167A /* Pods-ARCamera-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARCamera-Info.plist"; sourceTree = "<group>"; };
+		3302DD24A61CFB900DAC5AB23A5CB27A /* NextLevel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NextLevel-umbrella.h"; sourceTree = "<group>"; };
+		34EAB3A153838A62C5689D25DB822F0E /* Pods-ARCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		3920A280CFFF8E809AA96EB9CA538F72 /* NextLevelGIFCreator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelGIFCreator.swift; path = Sources/NextLevelGIFCreator.swift; sourceTree = "<group>"; };
+		3B9F1D0AC000A66294A8A589453F2C2E /* NextLevel+Metadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+Metadata.swift"; path = "Sources/NextLevel+Metadata.swift"; sourceTree = "<group>"; };
+		43C1B0BFD25A417AD22D050EEA33E3B3 /* NextLevel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NextLevel-Info.plist"; sourceTree = "<group>"; };
+		46E3DADE50504DB1AB3B99742222980E /* NextLevel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NextLevel-dummy.m"; sourceTree = "<group>"; };
+		48A9C9A9C712F5AFD3A2A83F2BF0C4A9 /* Pods-ARCamera-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARCamera-acknowledgements.plist"; sourceTree = "<group>"; };
+		50E333FDC6D39867AE03659682C09B93 /* NextLevel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NextLevel.modulemap; sourceTree = "<group>"; };
+		5259EC41044BEA4956B29FF5C9CD35ED /* NextLevel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NextLevel.framework; path = NextLevel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5787FB008846CAF66C6E2FE764BF4A8C /* NextLevel+AVFoundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+AVFoundation.swift"; path = "Sources/NextLevel+AVFoundation.swift"; sourceTree = "<group>"; };
+		58E34CFDC51C4221BA2F5E40CBF708D1 /* RPCircularProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RPCircularProgress-prefix.pch"; sourceTree = "<group>"; };
+		5AF19896363D0F70EEFE6C5B28CD47EF /* NextLevel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NextLevel.xcconfig; sourceTree = "<group>"; };
+		662A00475723FF6386875601A040D86B /* RPCircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RPCircularProgress.framework; path = RPCircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		762DBEFA5A52F1BD3300CA5D1B123595 /* NextLevelBufferRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelBufferRenderer.swift; path = Sources/NextLevelBufferRenderer.swift; sourceTree = "<group>"; };
+		7666E1F19D6A05EE0B73E7CC5DAF0283 /* NextLevel+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+Foundation.swift"; path = "Sources/NextLevel+Foundation.swift"; sourceTree = "<group>"; };
+		77005C053DDBA700614ABAE63938A3FD /* RPCircularProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RPCircularProgress.xcconfig; sourceTree = "<group>"; };
+		7E578FB71AAA49025AA36DEB5339A877 /* Pods-ARCamera-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARCamera-acknowledgements.markdown"; sourceTree = "<group>"; };
+		89435F6BD87AF87EF30AA0C2B808F63E /* Pods-ARCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARCamera-umbrella.h"; sourceTree = "<group>"; };
+		92783A74D474EC1F48E4C802DE85B33D /* NextLevelClip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelClip.swift; path = Sources/NextLevelClip.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FD6D91B5D63AB4C8FB724803437D553 /* Pods-ARCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARCamera-dummy.m"; sourceTree = "<group>"; };
+		ADCF554A04D76B8356DEA46EA5337F5D /* NextLevel+CMSampleBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+CMSampleBuffer.swift"; path = "Sources/NextLevel+CMSampleBuffer.swift"; sourceTree = "<group>"; };
+		AF1DBA3EFD6538DD82C09195373CADBD /* RPCircularProgress-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RPCircularProgress-Info.plist"; sourceTree = "<group>"; };
+		B3D511D3E66636095EB52894C7997E04 /* Pods-ARCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARCamera.release.xcconfig"; sourceTree = "<group>"; };
+		C38A29457308FA7DA7417C3AF04B883D /* Pods_ARCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ARCamera.framework; path = "Pods-ARCamera.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EBD1A5DB59ABA6D7824DB7706ED7E9 /* NextLevelProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelProtocols.swift; path = Sources/NextLevelProtocols.swift; sourceTree = "<group>"; };
+		C6748B3B54D085DB6183CDBBD10F6290 /* NextLevel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NextLevel-prefix.pch"; sourceTree = "<group>"; };
+		C9F376451EBEAF9324562FA9ED57AC32 /* RPCircularProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RPCircularProgress.swift; path = Source/RPCircularProgress.swift; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D4FCA69279D034705F0A3F3B996ED6C7 /* NextLevel+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+UIImage.swift"; path = "Sources/NextLevel+UIImage.swift"; sourceTree = "<group>"; };
+		E195C8A99091ABF0784A3C8086CDD657 /* RPCircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RPCircularProgress-umbrella.h"; sourceTree = "<group>"; };
+		E82541281510B52CB6771EFFA3653F49 /* NextLevelConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelConfiguration.swift; path = Sources/NextLevelConfiguration.swift; sourceTree = "<group>"; };
+		E9EEA5563FE4CFEB588AFED8ECDA804F /* NextLevelSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevelSession.swift; path = Sources/NextLevelSession.swift; sourceTree = "<group>"; };
+		EDC93363A523B2DFC21656F7F6472E07 /* NextLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextLevel.swift; path = Sources/NextLevel.swift; sourceTree = "<group>"; };
+		F8171E21CD6F7E155AD717368EE4393F /* RPCircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RPCircularProgress.modulemap; sourceTree = "<group>"; };
+		FF5F006C857EDCB668DFD12A6E4DD0FA /* NextLevel+CIContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NextLevel+CIContext.swift"; path = "Sources/NextLevel+CIContext.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC3DF7D83341C882B20BE838AF3479C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4ABE9A4953CF6CF32E2212B64112712 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E951B849542F638A4246DA16BC412EB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA507336B9F7F3435DC1C4B68E6331F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0858DD318F68BCF1B81A83E331F6E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0426CB63A54156EE2DBE24124C5459 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		339C5F1F3FBA00C8FBB1CF1584B8C98E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				36A4FC428CE8C80B45EC25DE5812FA6A /* Pods-ARCamera */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		33D013D202822AB817638922ADACF8F6 /* RPCircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				C9F376451EBEAF9324562FA9ED57AC32 /* RPCircularProgress.swift */,
+				FEA701BAE75BF1A1BE9AD86345644FC3 /* Support Files */,
+			);
+			name = RPCircularProgress;
+			path = RPCircularProgress;
+			sourceTree = "<group>";
+		};
+		36A4FC428CE8C80B45EC25DE5812FA6A /* Pods-ARCamera */ = {
+			isa = PBXGroup;
+			children = (
+				063AF92F814AAF7EA80BFE52D1DACF55 /* Pods-ARCamera.modulemap */,
+				7E578FB71AAA49025AA36DEB5339A877 /* Pods-ARCamera-acknowledgements.markdown */,
+				48A9C9A9C712F5AFD3A2A83F2BF0C4A9 /* Pods-ARCamera-acknowledgements.plist */,
+				9FD6D91B5D63AB4C8FB724803437D553 /* Pods-ARCamera-dummy.m */,
+				1F1467F49F2839DCAF98745F6306EB4E /* Pods-ARCamera-frameworks.sh */,
+				1FDCEBC957BB8222C1C7156561A0167A /* Pods-ARCamera-Info.plist */,
+				89435F6BD87AF87EF30AA0C2B808F63E /* Pods-ARCamera-umbrella.h */,
+				34EAB3A153838A62C5689D25DB822F0E /* Pods-ARCamera.debug.xcconfig */,
+				B3D511D3E66636095EB52894C7997E04 /* Pods-ARCamera.release.xcconfig */,
+			);
+			name = "Pods-ARCamera";
+			path = "Target Support Files/Pods-ARCamera";
+			sourceTree = "<group>";
+		};
+		3A4573317C02674E32C84172FEDFBECE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				50E333FDC6D39867AE03659682C09B93 /* NextLevel.modulemap */,
+				5AF19896363D0F70EEFE6C5B28CD47EF /* NextLevel.xcconfig */,
+				46E3DADE50504DB1AB3B99742222980E /* NextLevel-dummy.m */,
+				43C1B0BFD25A417AD22D050EEA33E3B3 /* NextLevel-Info.plist */,
+				C6748B3B54D085DB6183CDBBD10F6290 /* NextLevel-prefix.pch */,
+				3302DD24A61CFB900DAC5AB23A5CB27A /* NextLevel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NextLevel";
+			sourceTree = "<group>";
+		};
+		89BED5CC43782E647197234D29D8A8FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5259EC41044BEA4956B29FF5C9CD35ED /* NextLevel.framework */,
+				C38A29457308FA7DA7417C3AF04B883D /* Pods_ARCamera.framework */,
+				662A00475723FF6386875601A040D86B /* RPCircularProgress.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BE361F797691023B56F3FBDF49BD9169 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7DA9E60144544EE79AEB903C5C0280E /* NextLevel */,
+				33D013D202822AB817638922ADACF8F6 /* RPCircularProgress */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				BE361F797691023B56F3FBDF49BD9169 /* Pods */,
+				89BED5CC43782E647197234D29D8A8FB /* Products */,
+				339C5F1F3FBA00C8FBB1CF1584B8C98E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7DA9E60144544EE79AEB903C5C0280E /* NextLevel */ = {
+			isa = PBXGroup;
+			children = (
+				EDC93363A523B2DFC21656F7F6472E07 /* NextLevel.swift */,
+				5787FB008846CAF66C6E2FE764BF4A8C /* NextLevel+AVFoundation.swift */,
+				FF5F006C857EDCB668DFD12A6E4DD0FA /* NextLevel+CIContext.swift */,
+				ADCF554A04D76B8356DEA46EA5337F5D /* NextLevel+CMSampleBuffer.swift */,
+				7666E1F19D6A05EE0B73E7CC5DAF0283 /* NextLevel+Foundation.swift */,
+				3B9F1D0AC000A66294A8A589453F2C2E /* NextLevel+Metadata.swift */,
+				D4FCA69279D034705F0A3F3B996ED6C7 /* NextLevel+UIImage.swift */,
+				762DBEFA5A52F1BD3300CA5D1B123595 /* NextLevelBufferRenderer.swift */,
+				92783A74D474EC1F48E4C802DE85B33D /* NextLevelClip.swift */,
+				E82541281510B52CB6771EFFA3653F49 /* NextLevelConfiguration.swift */,
+				3920A280CFFF8E809AA96EB9CA538F72 /* NextLevelGIFCreator.swift */,
+				C3EBD1A5DB59ABA6D7824DB7706ED7E9 /* NextLevelProtocols.swift */,
+				E9EEA5563FE4CFEB588AFED8ECDA804F /* NextLevelSession.swift */,
+				3A4573317C02674E32C84172FEDFBECE /* Support Files */,
+			);
+			name = NextLevel;
+			path = NextLevel;
+			sourceTree = "<group>";
+		};
+		FEA701BAE75BF1A1BE9AD86345644FC3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8171E21CD6F7E155AD717368EE4393F /* RPCircularProgress.modulemap */,
+				77005C053DDBA700614ABAE63938A3FD /* RPCircularProgress.xcconfig */,
+				183EAD6DDC98D6D5EC4E82CACBE3AE13 /* RPCircularProgress-dummy.m */,
+				AF1DBA3EFD6538DD82C09195373CADBD /* RPCircularProgress-Info.plist */,
+				58E34CFDC51C4221BA2F5E40CBF708D1 /* RPCircularProgress-prefix.pch */,
+				E195C8A99091ABF0784A3C8086CDD657 /* RPCircularProgress-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RPCircularProgress";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		53E3047DA823B55346D83FCF2E453D2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AF58FDBFC6C759DA22148B1B330CF99 /* RPCircularProgress-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7659F36CF3D4FF48885B212FB8E88B79 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA67702BCCB575555022F29906B4116 /* NextLevel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ED25920944E7D117C0127E65C55A92E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49943137CC81B748B83261395A1626EC /* Pods-ARCamera-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		11EC53E65DC9E7F5D43B84C4F60B7851 /* Pods-ARCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 136BF9DEA05AD3D404D325B4D885162F /* Build configuration list for PBXNativeTarget "Pods-ARCamera" */;
+			buildPhases = (
+				8ED25920944E7D117C0127E65C55A92E /* Headers */,
+				0582622CC0CD74D0A6B1DE85EB02097E /* Sources */,
+				E951B849542F638A4246DA16BC412EB9 /* Frameworks */,
+				45229E0E19BE07043A7B0BFD81277DB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				125E8C0C9AB8A1913B0550879918FA07 /* PBXTargetDependency */,
+				6DDF9ED1D289952669E875B62313F8E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-ARCamera";
+			productName = "Pods-ARCamera";
+			productReference = C38A29457308FA7DA7417C3AF04B883D /* Pods_ARCamera.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B36AEC81309F0FEDAE7D7985020CA31A /* NextLevel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2731189D7838B45E5D6A3C3A4015A3D6 /* Build configuration list for PBXNativeTarget "NextLevel" */;
+			buildPhases = (
+				7659F36CF3D4FF48885B212FB8E88B79 /* Headers */,
+				A0AAC17F02B6BFB69E111CFBC89A8B6D /* Sources */,
+				F0858DD318F68BCF1B81A83E331F6E74 /* Frameworks */,
+				D952FFA454790DEE2DA2641EE88D5AD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NextLevel;
+			productName = NextLevel;
+			productReference = 5259EC41044BEA4956B29FF5C9CD35ED /* NextLevel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF17A187251DCD6C551C8C2A33F3105C /* RPCircularProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE12319B55471804DFF3DC08B93227E3 /* Build configuration list for PBXNativeTarget "RPCircularProgress" */;
+			buildPhases = (
+				53E3047DA823B55346D83FCF2E453D2C /* Headers */,
+				F915C8FDEFD526EEB1538CAA1904C985 /* Sources */,
+				CC3DF7D83341C882B20BE838AF3479C9 /* Frameworks */,
+				5D369373ABEAE9F02C51AC0E0AE2FAA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RPCircularProgress;
+			productName = RPCircularProgress;
+			productReference = 662A00475723FF6386875601A040D86B /* RPCircularProgress.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 89BED5CC43782E647197234D29D8A8FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B36AEC81309F0FEDAE7D7985020CA31A /* NextLevel */,
+				11EC53E65DC9E7F5D43B84C4F60B7851 /* Pods-ARCamera */,
+				FF17A187251DCD6C551C8C2A33F3105C /* RPCircularProgress */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45229E0E19BE07043A7B0BFD81277DB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D369373ABEAE9F02C51AC0E0AE2FAA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D952FFA454790DEE2DA2641EE88D5AD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0582622CC0CD74D0A6B1DE85EB02097E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ACF6F7D25B0C93BE0ED0230DA921DDB /* Pods-ARCamera-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0AAC17F02B6BFB69E111CFBC89A8B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BDF16F05BB7889F7A1FE1B46092A493 /* NextLevel+AVFoundation.swift in Sources */,
+				952E5FD8E7594F1D829021FF8944B9E2 /* NextLevel+CIContext.swift in Sources */,
+				B680A26FBEE48771C261ED6FC6614017 /* NextLevel+CMSampleBuffer.swift in Sources */,
+				27C774B409174F8C09C7D3FA4BBADB3F /* NextLevel+Foundation.swift in Sources */,
+				4362DFF2C735ECD7BE86FC2F109628B5 /* NextLevel+Metadata.swift in Sources */,
+				6D4386E2A08785C67DD9249DD81947FF /* NextLevel+UIImage.swift in Sources */,
+				8F4C0F17ABFD483FC45378CA50E0D27E /* NextLevel-dummy.m in Sources */,
+				D130B35DAA38B43A388BCE45B9A8A525 /* NextLevel.swift in Sources */,
+				C84E858A19FEC831AFC07DC65B9D098E /* NextLevelBufferRenderer.swift in Sources */,
+				C120BAB3A8D08FF34BD0904A2B47D110 /* NextLevelClip.swift in Sources */,
+				EDBF2AEA6BB571F6582C985D969FBDB8 /* NextLevelConfiguration.swift in Sources */,
+				A319AA8B17F5F56D4FBDDDEFF1851FD7 /* NextLevelGIFCreator.swift in Sources */,
+				352DDD09FFACE19988DFC526AB8C3259 /* NextLevelProtocols.swift in Sources */,
+				8B8AAE6D14F7505208C727479C8EE247 /* NextLevelSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F915C8FDEFD526EEB1538CAA1904C985 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDD7B907A851B68BEC9371B0026FA52F /* RPCircularProgress-dummy.m in Sources */,
+				7D4058E5C55C8DBC10B2CAC1635B136E /* RPCircularProgress.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		125E8C0C9AB8A1913B0550879918FA07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NextLevel;
+			target = B36AEC81309F0FEDAE7D7985020CA31A /* NextLevel */;
+			targetProxy = A282ECAD3A1008A9988C2A7ED65BD331 /* PBXContainerItemProxy */;
+		};
+		6DDF9ED1D289952669E875B62313F8E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RPCircularProgress;
+			target = FF17A187251DCD6C551C8C2A33F3105C /* RPCircularProgress */;
+			targetProxy = 73F0AC4C97A008DDA9167A9053764D40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4093433A309EFE160336AC736594AB22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5F6B34D0ED2F1648677D761C5F501B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34EAB3A153838A62C5689D25DB822F0E /* Pods-ARCamera.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ARCamera/Pods-ARCamera-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ARCamera/Pods-ARCamera.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		76F270CBE8E37A0A3A22928249BAC449 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77005C053DDBA700614ABAE63938A3FD /* RPCircularProgress.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RPCircularProgress/RPCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RPCircularProgress/RPCircularProgress-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RPCircularProgress/RPCircularProgress.modulemap";
+				PRODUCT_MODULE_NAME = RPCircularProgress;
+				PRODUCT_NAME = RPCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		924D56B1D59CD3049300EAEEA256114E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CBBFC0EB2206B9747C9B8EC10C41A5AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77005C053DDBA700614ABAE63938A3FD /* RPCircularProgress.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RPCircularProgress/RPCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RPCircularProgress/RPCircularProgress-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RPCircularProgress/RPCircularProgress.modulemap";
+				PRODUCT_MODULE_NAME = RPCircularProgress;
+				PRODUCT_NAME = RPCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4B8FCA08F092E121DC34E4153C8D0E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF19896363D0F70EEFE6C5B28CD47EF /* NextLevel.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NextLevel/NextLevel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NextLevel/NextLevel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NextLevel/NextLevel.modulemap";
+				OTHER_SWIFT_FLAGS = "$(inherited) -DUSE_ARKIT";
+				PRODUCT_MODULE_NAME = NextLevel;
+				PRODUCT_NAME = NextLevel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F1CD94049A966BBE3A33C18F8F60751C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF19896363D0F70EEFE6C5B28CD47EF /* NextLevel.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NextLevel/NextLevel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NextLevel/NextLevel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NextLevel/NextLevel.modulemap";
+				OTHER_SWIFT_FLAGS = "$(inherited) -DUSE_ARKIT";
+				PRODUCT_MODULE_NAME = NextLevel;
+				PRODUCT_NAME = NextLevel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F64B0983030842FB8656745B61EFCC0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3D511D3E66636095EB52894C7997E04 /* Pods-ARCamera.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ARCamera/Pods-ARCamera-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ARCamera/Pods-ARCamera.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		136BF9DEA05AD3D404D325B4D885162F /* Build configuration list for PBXNativeTarget "Pods-ARCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F6B34D0ED2F1648677D761C5F501B9A /* Debug */,
+				F64B0983030842FB8656745B61EFCC0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2731189D7838B45E5D6A3C3A4015A3D6 /* Build configuration list for PBXNativeTarget "NextLevel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B8FCA08F092E121DC34E4153C8D0E5 /* Debug */,
+				F1CD94049A966BBE3A33C18F8F60751C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4093433A309EFE160336AC736594AB22 /* Debug */,
+				924D56B1D59CD3049300EAEEA256114E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE12319B55471804DFF3DC08B93227E3 /* Build configuration list for PBXNativeTarget "RPCircularProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBBFC0EB2206B9747C9B8EC10C41A5AE /* Debug */,
+				76F270CBE8E37A0A3A22928249BAC449 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

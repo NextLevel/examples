@@ -1,0 +1,24 @@
+# include public/private pods
+source 'git@github.com:cocoapods/Specs.git'
+
+platform :ios, '12.0'
+
+workspace './ARCamera.xcworkspace'
+swift_version = '5.0'
+use_frameworks!
+
+target 'ARCamera' do
+  pod 'NextLevel', '0.15.4'
+  pod 'RPCircularProgress', '0.4.1'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        # setup NextLevel for ARKit use
+        if target.name == 'NextLevel'
+          target.build_configurations.each do |config|
+            config.build_settings['OTHER_SWIFT_FLAGS'] = '$(inherited) -DUSE_ARKIT'
+          end
+        end
+    end
+end
