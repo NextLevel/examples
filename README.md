@@ -4,7 +4,7 @@ This repository is for examples of the various ways to integrate `NextLevel` int
 
 ## Examples
 
-- [ARCamera](https://github.com/piemonte/player), capture & record ARKit videos, photos
+- [ARCamera](https://github.com/NextLevel/examples/tree/master/ARCamera), capture & record ARKit videos, photos
 
 ## Resources
 
