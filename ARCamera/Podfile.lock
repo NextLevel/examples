@@ -1,10 +1,10 @@
 PODS:
   - NextLevel (0.15.4)
-  - RPCircularProgress (0.4.1)
+  - RPCircularProgress (0.5.0)
 
 DEPENDENCIES:
   - NextLevel (= 0.15.4)
-  - RPCircularProgress (= 0.4.1)
+  - RPCircularProgress (= 0.5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -13,8 +13,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   NextLevel: 225ac984b75816bad3580d609dcbf9eab85258f4
-  RPCircularProgress: 1aeed753e25aeb5dfde499a40c8eb3c0ec138771
+  RPCircularProgress: 4499d4a1453dfbd3fe5bd8c6f344fd51cff3ad00
 
-PODFILE CHECKSUM: 3473fb0ffcb6a3db2ab9981a1555f0b7d0c8e403
+PODFILE CHECKSUM: ca13f6de88b32e6a941e80ec1a9428077761c2f6
 
-COCOAPODS: 1.7.0.beta.3
+COCOAPODS: 1.7.0.rc.2

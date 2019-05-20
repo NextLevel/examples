@@ -9,7 +9,7 @@ use_frameworks!
 
 target 'ARCamera' do
   pod 'NextLevel', '0.15.4'
-  pod 'RPCircularProgress', '0.4.1'
+  pod 'RPCircularProgress', '0.5.0'
 end
 
 post_install do |installer|
