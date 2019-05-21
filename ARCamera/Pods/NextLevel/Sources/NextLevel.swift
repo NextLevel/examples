@@ -280,12 +280,6 @@ public class NextLevel: NSObject {
                 self.configureSessionDevices()
                 self.configureMetadataObjects()
                 self.updateVideoOrientation()
-                
-                #if USE_ARKIT
-                if self.captureMode == .arKit {
-                    self.setupContextIfNecessary()
-                }
-                #endif
                 self.delegate?.nextLevelCaptureModeDidChange(self)
             }
         }
@@ -355,11 +349,13 @@ public class NextLevel: NSObject {
     /// Checks if the current capture session is running
     public var isRunning: Bool {
         get {
+            #if USE_ARKIT
             if #available(iOS 11.0, *) {
                 if self.captureMode == .arKit {
                     return self._arRunning
                 }
             }
+            #endif
             if let session = self._captureSession {
                 return session.isRunning
             }
@@ -375,6 +371,19 @@ public class NextLevel: NSObject {
         }
     }
     
+    /// Shared Core Image rendering context.
+    public var sharedCIContext: CIContext? {
+        set {
+            self._ciContext = newValue
+        }
+        get {
+            if self._ciContext == nil {
+                self._ciContext = CIContext.createDefaultCIContext()
+            }
+            return self._ciContext
+        }
+    }
+    
     // MARK: - private instance vars
     
     internal var _sessionQueue: DispatchQueue
@@ -386,12 +395,6 @@ public class NextLevel: NSObject {
     
     internal var _videoCustomContextRenderingEnabled: Bool = false
     internal var _sessionVideoCustomContextImageBuffer: CVPixelBuffer?
-    internal var _ciContext: CIContext?
-    
-    internal var _pixelBufferPool: CVPixelBufferPool?
-    internal var _bufferWidth: Int = 0
-    internal var _bufferHeight: Int = 0
-    internal var _bufferFormatType: OSType = OSType(kCVPixelFormatType_32BGRA)
     
     // AVFoundation
     
@@ -425,6 +428,8 @@ public class NextLevel: NSObject {
     internal var _lastVideoFrame: CMSampleBuffer?
     internal var _lastAudioFrame: CMSampleBuffer?
     
+    internal var _ciContext: CIContext?
+    
     // ARKit
     
     internal var _arRunning: Bool = false
@@ -449,9 +454,11 @@ public class NextLevel: NSObject {
         self.videoConfiguration = NextLevelVideoConfiguration()
         self.audioConfiguration = NextLevelAudioConfiguration()
         self.photoConfiguration = NextLevelPhotoConfiguration()
+        #if USE_ARKIT
         if #available(iOS 11.0, *) {
             self._arConfiguration = NextLevelARConfiguration()
         }
+        #endif
         
         super.init()
         
@@ -486,10 +493,11 @@ public class NextLevel: NSObject {
         self.previewLayer.session = nil
         
         self._currentDevice = nil
-        self._ciContext = nil
         
         self._recordingSession = nil
         self._captureSession = nil
+
+        self.sharedCIContext = nil
     }
 }
 
@@ -567,9 +575,11 @@ extension NextLevel {
         }
         
         if self.captureMode == .arKit {
+            #if USE_ARKIT
             if #available(iOS 11.0, *) {
                 setupARSession()
             }
+            #endif
         } else {
             guard self._captureSession == nil else {
                 throw NextLevelError.started
@@ -598,8 +608,8 @@ extension NextLevel {
         }
         
         #if USE_ARKIT
-        if self.captureMode == .arKit {
-            if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, *) {
+            if self.captureMode == .arKit {
                 self.executeClosureAsyncOnSessionQueueIfNecessary {
                     self.arConfiguration?.session?.pause()
                     self._arRunning = false
@@ -2248,19 +2258,15 @@ extension NextLevel {
                 }
             }
             
-            // create a render context
-            
-            self.setupContextIfNecessary()
-            
             var photoDict: [String: Any]? = nil
             let ratio = self.videoConfiguration.aspectRatio.ratio
             if let customFrame = self._sessionVideoCustomContextImageBuffer {
-                
+            
                 // TODO append exif metadata
                 
                 // add JPEG, thumbnail
                 
-                if let photo = self._ciContext?.uiimage(withPixelBuffer: customFrame) {
+                if let photo = self.sharedCIContext?.uiimage(withPixelBuffer: customFrame) {
                     let croppedPhoto = ratio != nil ? photo.nx_croppedImage(to: ratio!) : photo
                     if let imageData = photo.jpegData(compressionQuality: 1),
                         let croppedImageData = croppedPhoto.jpegData(compressionQuality: 1) {
@@ -2284,7 +2290,7 @@ extension NextLevel {
                 }
                 
                 // add JPEG, thumbnail
-                if let photo = self._ciContext?.uiimage(withSampleBuffer: videoFrame) {
+                if let photo = self.sharedCIContext?.uiimage(withSampleBuffer: videoFrame) {
                     let croppedPhoto = ratio != nil ? photo.nx_croppedImage(to: ratio!) : photo
                     if let imageData = photo.jpegData(compressionQuality: 1),
                         let croppedImageData = croppedPhoto.jpegData(compressionQuality: 1){
@@ -2301,8 +2307,7 @@ extension NextLevel {
                 // TODO append exif metadata
                 
                 // add JPEG, thumbnail
-                if let context = self._ciContext,
-                    let photo = context.uiimage(withPixelBuffer: arFrame),
+                if let photo = self.sharedCIContext?.uiimage(withPixelBuffer: arFrame),
                     let imageData = photo.jpegData(compressionQuality: 1) {
                     
                     if photoDict == nil {
@@ -2666,59 +2671,6 @@ extension NextLevel {
     }
 }
 
-// MARK: - rendering support
-
-extension NextLevel {
-    
-    private func setupContextIfNecessary() {
-        guard self._ciContext == nil else {
-            return
-        }
-        
-        let options : [CIContextOption : Any] = [.outputColorSpace : CGColorSpaceCreateDeviceRGB(),
-                                                 .outputPremultiplied: true,
-                                                 .useSoftwareRenderer : NSNumber(booleanLiteral: false)]
-        if let device = MTLCreateSystemDefaultDevice() {
-            self._ciContext = CIContext(mtlDevice: device, options: options)
-        } else if let eaglContext = EAGLContext(api: .openGLES2) {
-            self._ciContext = CIContext(eaglContext: eaglContext, options: options)
-        }
-    }
-    
-    private func setupPixelBufferPoolIfNecessary(_ pixelBuffer: CVPixelBuffer) {
-        let formatType = CVPixelBufferGetPixelFormatType(pixelBuffer)
-        let width = CVPixelBufferGetWidth(pixelBuffer)
-        let height = CVPixelBufferGetHeight(pixelBuffer)
-        
-        guard self._pixelBufferPool == nil ||
-            width != self._bufferWidth ||
-            height != self._bufferHeight ||
-            formatType != self._bufferFormatType
-            else {
-                return
-        }
-        
-        self._bufferWidth = width
-        self._bufferHeight = height
-        self._bufferFormatType = formatType
-        
-        let poolAttributes: [String : AnyObject] = [String(kCVPixelBufferPoolMinimumBufferCountKey): NSNumber(integerLiteral: 1)]
-        
-        // TODO: doesn't properly support orientation, should reference videoConfiguration settings
-        let pixelBufferAttributes: [String:AnyObject] = [String(kCVPixelBufferPixelFormatTypeKey) : NSNumber(integerLiteral: Int(self._bufferFormatType)),
-                                                         String(kCVPixelBufferWidthKey) : NSNumber(value: self._bufferHeight), // flip
-                                                         String(kCVPixelBufferHeightKey) : NSNumber(value: self._bufferWidth), // flip
-                                                         String(kCVPixelBufferMetalCompatibilityKey) : NSNumber(booleanLiteral: true),
-                                                         String(kCVPixelBufferIOSurfacePropertiesKey) : [:] as AnyObject ]
-        
-        var pixelBufferPool: CVPixelBufferPool? = nil
-        if CVPixelBufferPoolCreate(kCFAllocatorDefault, poolAttributes as CFDictionary, pixelBufferAttributes as CFDictionary, &pixelBufferPool) == kCVReturnSuccess {
-            self._pixelBufferPool = pixelBufferPool
-        }
-    }
-    
-}
-
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate
 
 extension NextLevel: AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate {
@@ -2896,22 +2848,13 @@ extension NextLevel: AVCaptureDepthDataOutputDelegate {
 extension NextLevel {
     
     public func arSession(_ session: ARSession, didUpdate frame: ARFrame) {
-        var pixelBuffer = frame.capturedImage
-        let timestamp = frame.timestamp
-        
-        // TODO: support orientation changes, maybe use snapshot API instead
-        self.setupPixelBufferPoolIfNecessary(pixelBuffer)
-        
-        if let pixelBufferPool = self._pixelBufferPool,
-            let adjustedPixelBuffer = self._ciContext?.createPixelBuffer(fromPixelBuffer: pixelBuffer, withOrientation: .right, pixelBufferPool: pixelBufferPool) {
-            pixelBuffer = adjustedPixelBuffer
-            
-            self.videoDelegate?.nextLevel(self, willProcessFrame: frame, pixelBuffer: pixelBuffer, timestamp: timestamp, onQueue: self._sessionQueue)
-            self._lastARFrame = pixelBuffer
-            
-            if let session = self._recordingSession {
-                self.handleVideoOutput(pixelBuffer: pixelBuffer, timestamp: timestamp, session: session)
-            }
+        self.videoDelegate?.nextLevel(self, willProcessFrame: frame, timestamp: frame.timestamp, onQueue: self._sessionQueue)
+    }
+    
+    public func arSession(_ session: ARSession, didRenderPixelBuffer pixelBuffer: CVPixelBuffer, atTime time: TimeInterval) {
+        self._lastARFrame = pixelBuffer
+        if let session = self._recordingSession {
+            self.handleVideoOutput(pixelBuffer: pixelBuffer, timestamp: time, session: session)
         }
     }
     

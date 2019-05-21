@@ -8,7 +8,7 @@ swift_version = '5.0'
 use_frameworks!
 
 target 'ARCamera' do
-  pod 'NextLevel', '0.15.4'
+  pod 'NextLevel', '0.16.0'
   pod 'RPCircularProgress', '0.5.0'
 end
 

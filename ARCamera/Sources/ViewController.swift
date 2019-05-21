@@ -474,7 +474,7 @@ extension ViewController: NextLevelVideoDelegate {
     public func nextLevel(_ nextLevel: NextLevel, willProcessRawVideoSampleBuffer sampleBuffer: CMSampleBuffer, onQueue queue: DispatchQueue) {
     }
     
-    public func nextLevel(_ nextLevel: NextLevel, willProcessFrame frame: AnyObject, pixelBuffer: CVPixelBuffer, timestamp: TimeInterval, onQueue queue: DispatchQueue) {
+    public func nextLevel(_ nextLevel: NextLevel, willProcessFrame frame: AnyObject, timestamp: TimeInterval, onQueue queue: DispatchQueue) {
     }
     
     // enabled by isCustomContextVideoRenderingEnabled
@@ -539,9 +539,11 @@ extension ViewController: NextLevelVideoDelegate {
 extension ViewController: ARSCNViewDelegate {
 
     public func renderer(_ renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: TimeInterval) {
-        if let nextLevel = self._nextLevel,
-            nextLevel.isRecording {
-            self._bufferRenderer?.renderer(renderer, didRenderScene: scene, atTime: time)
+        self._bufferRenderer?.renderer(renderer, didRenderScene: scene, atTime: time)
+        
+        if let session = self._nextLevel?.arConfiguration?.session,
+            let pixelBuffer = self._bufferRenderer?.videoBufferOutput {
+            self._nextLevel?.arSession(session, didRenderPixelBuffer: pixelBuffer, atTime: time)
         }
     }
     

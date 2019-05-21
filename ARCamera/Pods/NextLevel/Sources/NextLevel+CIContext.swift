@@ -30,6 +30,25 @@ import Foundation
 
 extension CIContext {
     
+    /// Factory for creating a CIContext using the available graphics API.
+    ///
+    /// - Parameter mtlDevice: Processor for computing
+    /// - Returns: Default configuration rendering context, otherwise nil.
+    public class func createDefaultCIContext(_ mtlDevice: MTLDevice? = nil) -> CIContext? {
+        let options : [CIContextOption : Any] = [.outputColorSpace : CGColorSpaceCreateDeviceRGB(),
+                                                 .outputPremultiplied: true,
+                                                 .useSoftwareRenderer : NSNumber(booleanLiteral: false)]
+        if let device = mtlDevice {
+            return CIContext(mtlDevice: device, options: options)
+        } else if let device = MTLCreateSystemDefaultDevice() {
+            return CIContext(mtlDevice: device, options: options)
+        } else if let eaglContext = EAGLContext(api: .openGLES2) {
+            return CIContext(eaglContext: eaglContext, options: options)
+        } else {
+            return nil
+        }
+    }
+    
     /// Creates a UIImage from the given sample buffer input
     ///
     /// - Parameter sampleBuffer: sample buffer input
@@ -74,13 +93,36 @@ extension CIContext {
         if CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault, pixelBufferPool, &updatedPixelBuffer) == kCVReturnSuccess {
             if let updatedPixelBuffer = updatedPixelBuffer {
                 CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags.readOnly)
-                
                 let ciImage = CIImage(cvPixelBuffer: pixelBuffer, options: nil)
                 let orientedImage = ciImage.oriented(orientation)
                 self.render(orientedImage, to: updatedPixelBuffer)
-
                 CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags.readOnly)
                 return updatedPixelBuffer
+            }
+        }
+        return nil
+    }
+    
+    /// Create a pixel buffer from a MTLTexture and orientation value.
+    ///
+    /// - Parameters:
+    ///   - mtlTexture: Input texture to render
+    ///   - orientation: CGImage orientation for the new pixel buffer
+    ///   - pixelBufferPool: Pixel buffer pool at which to allocate the new buffer
+    /// - Returns: Oriented pixel buffer, otherwise nil
+    @available(iOS 11.0, *)
+    public func createPixelBuffer(fromMTLTexture mtlTexture: MTLTexture, withOrientation orientation: CGImagePropertyOrientation, pixelBufferPool: CVPixelBufferPool) -> CVPixelBuffer? {
+        var updatedPixelBuffer: CVPixelBuffer? = nil
+        if CVPixelBufferPoolCreatePixelBuffer(kCFAllocatorDefault, pixelBufferPool, &updatedPixelBuffer) == kCVReturnSuccess {
+            if let updatedPixelBuffer = updatedPixelBuffer {
+                // update orientation to match Metal's origin
+                let ciImage = CIImage(mtlTexture: mtlTexture, options: nil)
+                if let orientedImage = ciImage?.oriented(orientation) {
+                    CVPixelBufferLockBaseAddress(updatedPixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+                    self.render(orientedImage, to: updatedPixelBuffer)
+                    CVPixelBufferUnlockBaseAddress(updatedPixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+                    return updatedPixelBuffer
+                }
             }
         }
         return nil
